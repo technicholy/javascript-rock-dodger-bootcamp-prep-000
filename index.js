@@ -131,8 +131,8 @@ function moveDodgerLeft() {
 function moveDodgerRight() {
   var currentPos = positionToInteger(DODGER.style.right)
   function step() {
+    DODGER.style.right = `${currentPos += 4}px`
     if (DODGER.style.right < GAME_WIDTH){
-      DODGER.style.right = `${currentPos += 4}px`
       window.requestAnimationFrame(step);
     }
   }window.requestAnimationFrame(step);
