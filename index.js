@@ -122,18 +122,17 @@ function moveDodgerLeft() {
   var currentPos = positionToInteger(DODGER.style.left)
   function step (){
     if (currentPos > 0){
-      DODGER.style.left = `${currentPos -= 4}px`
+      DODGER.style.left = `${currentPos -= 4}px`;
     }
   }
   window.requestAnimationFrame(step);
 }
 
 function moveDodgerRight() {
-  var currentPos = positionToInteger(DODGER.style.left)
-  DODGER.style.left = `${currentPos += 4}px`
+  var currentPos = positionToInteger(DODGER.style.left+40)
   function step() {
-    if (positionToInteger(DODGER.style.left+40) < GAME_WIDTH){
-      window.requestAnimationFrame(step);
+    if (currentPos < GAME_WIDTH){
+      DODGER.style.left = `${currentPos += 4}px`;
     }
   }window.requestAnimationFrame(step);
 }
