@@ -76,6 +76,9 @@ function createRock(x) {
     for (let i = 0; i < ROCKS.length; i++){
       if (checkCollision(ROCKS[i])){
         endGame()
+      } 
+      if (ROCKS[i].style.top < 360) {
+        ROCKS[i].style.top = `${positionToInteger(ROCKS[i].style.top) += 2}px`;
       }
     }
     /**
