@@ -120,12 +120,13 @@ function moveDodger(e) {
 
 function moveDodgerLeft() {
   var currentPos = positionToInteger(DODGER.style.left)
-  DODGER.style.left = `${currentPos -= 4}px`
-  function step() {
-    if (Math.sign(positionToInteger(DODGER.style.left)) === 1){
-      window.requestAnimationFrame(step);
+  function step (){
+    if (currentPos > 0){
+      DODGER.style.left = `${currentPos -= 4}px`
     }
-  }//window.requestAnimationFrame(step);
+  }
+  window.requestAnimationFrame(step);
+  }
 }
 
 function moveDodgerRight() {
