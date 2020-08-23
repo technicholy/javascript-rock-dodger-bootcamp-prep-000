@@ -122,7 +122,7 @@ function moveDodgerLeft() {
   var currentPos = positionToInteger(DODGER.style.left)
   DODGER.style.left = `${currentPos -= 4}px`
   function step() {
-    if (positionToInteger(DODGER.style.left) > 0){
+    if (Math.sign(positionToInteger(DODGER.style.left)) === 1){
       window.requestAnimationFrame(step);
     }
   }window.requestAnimationFrame(step);
