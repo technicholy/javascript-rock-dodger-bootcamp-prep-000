@@ -115,12 +115,12 @@ function moveDodger(e) {
     moveDodgerLeft()
   } else if (e.which === RIGHT_ARROW){
     moveDodgerRight()
-  } 
+  }
 }
 
 function moveDodgerLeft() {
   var currentPos = positionToInteger(GAME.style.left)
-  function step() {    
+  function step() {
     if (DODGER.style.left > GAME.style.left){
       DODGER.style.left = `${currentPos -= 4}px`
       window.requestAnimationFrame(step);
@@ -130,7 +130,7 @@ function moveDodgerLeft() {
 
 function moveDodgerRight() {
   var currentPos = positionToInteger(GAME.style.right)
-  function step() {    
+  function step() {
     if (DODGER.style.right < GAME.style.right){
       DODGER.style.right = `${currentPos += 4}px`
       window.requestAnimationFrame(step);
