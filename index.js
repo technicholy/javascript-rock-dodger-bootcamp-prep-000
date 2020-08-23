@@ -155,4 +155,4 @@ function start() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000)
 }
-START.onclick = start()
+START.onclick = start() 
