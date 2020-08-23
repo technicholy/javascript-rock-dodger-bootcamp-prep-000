@@ -18,8 +18,6 @@ var gameInterval = null
  */
 
 function checkCollision(rock) {
-  // implement me!
-  // use the comments below to guide you!
   const top = positionToInteger(rock.style.top)
 
   // rocks are 20px high
@@ -41,6 +39,8 @@ function checkCollision(rock) {
         (rockLeftEdge < dodgerRightEdge && rockRightEdge >  dodgerRightEdge)
           ) {
       return true
+    } else{
+      return false
     }
   }
 }
