@@ -122,7 +122,7 @@ function moveDodgerLeft() {
   var currentPos = positionToInteger(DODGER.style.left)
   function step() {
     DODGER.style.left = `${currentPos -= 4}px`
-    if (DODGER.style.left > 0){
+    if (positionToInteger(DODGER.style.left) > 0){
       window.requestAnimationFrame(step);
     }
   }window.requestAnimationFrame(step);
@@ -132,7 +132,7 @@ function moveDodgerRight() {
   var currentPos = positionToInteger(DODGER.style.left)
   function step() {
     DODGER.style.left = `${currentPos += 4}px`
-    if (DODGER.style.left < GAME_WIDTH){
+    if (positionToInteger(DODGER.style.left) < GAME_WIDTH){
       window.requestAnimationFrame(step);
     }
   }window.requestAnimationFrame(step);
