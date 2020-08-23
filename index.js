@@ -70,7 +70,7 @@ function createRock(x) {
       if (checkCollision(ROCKS[i])){
         endGame()
       }
-      if (positionToInteger(ROCKS[i].style.top) < 360) {
+      if (positionToInteger(ROCKS[i].style.top) < 400) {
         ROCKS[i].style.top = `${positionToInteger(ROCKS[i].style.top) + 10}px`;
       } else {
         ROCKS[i].remove();
