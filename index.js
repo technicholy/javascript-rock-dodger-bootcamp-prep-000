@@ -132,7 +132,7 @@ function moveDodgerRight() {
   var currentPos = positionToInteger(DODGER.style.left)
   function step() {
     DODGER.style.left = `${currentPos += 4}px`
-    if (positionToInteger(DODGER.style.left) < GAME_WIDTH){
+    if (positionToInteger(DODGER.style.left+40) < GAME_WIDTH){
       window.requestAnimationFrame(step);
     }
   }window.requestAnimationFrame(step);
@@ -155,4 +155,4 @@ function start() {
     createRock(Math.floor(Math.random() *  (GAME_WIDTH - 20)))
   }, 1000)
 }
-//START.onclick = start()
+
