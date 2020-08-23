@@ -125,7 +125,7 @@ function moveDodgerLeft() {
     if (Math.sign(positionToInteger(DODGER.style.left)) === 1){
       window.requestAnimationFrame(step);
     }
-  }window.requestAnimationFrame(step);
+  }//window.requestAnimationFrame(step);
 }
 
 function moveDodgerRight() {
