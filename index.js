@@ -73,8 +73,11 @@ function createRock(x) {
    * seems like a good pace.)
    */
   function moveRock() {
-    // implement me!
-    // (use the comments below to guide you!)
+    for (let i = 0; i < ROCKS.length; i++){
+      if (checkCollision(ROCKS[i])){
+        endGame()
+      }
+    }
     /**
      * If a rock collides with the DODGER,
      * we should call endGame().
@@ -108,6 +111,7 @@ function createRock(x) {
  * Finally, alert "YOU LOSE!" to the player.
  */
 function endGame() {
+  console.log('End Game');
 }
 
 function moveDodger(e) {
