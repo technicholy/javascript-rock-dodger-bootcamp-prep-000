@@ -79,6 +79,8 @@ function createRock(x) {
       }
       if (ROCKS[i].style.top < 360) {
         ROCKS[i].style.top = `${positionToInteger(ROCKS[i].style.top) += 2}px`;
+      } else {
+        ROCKS.splice([i],1)
       }
     }
     /**
