@@ -76,7 +76,7 @@ function createRock(x) {
       if (checkCollision(ROCKS[i])){
         endGame()
       }
-      if (ROCKS[i].style.top < 360) {
+      if (positionToInteger(ROCKS[i].style.top) < 360) {
         ROCKS[i].style.top = `${positionToInteger(ROCKS[i].style.top) += 2}px`;
       } else {
         ROCKS.splice([i],1)
