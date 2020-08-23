@@ -111,7 +111,7 @@ function createRock(x) {
  */
 function endGame() {
   clearInterval(gameInterval);
-  window.removeEventListener('keydown')
+  window.removeEventListener('keydown', moveDodger)
   console.log('End Game');
 }
 
